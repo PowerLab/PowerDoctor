@@ -5,7 +5,7 @@ it is power model generation tool. it allows developer to make power model from 
 
 This tool developed based on OSMonitor version 2.0.
 
-OSMonitor: https://github.com/eolwral/OSMonitor
+[OSMonitor|https://github.com/eolwral/OSMonitor]
 
 It offers the following information.
 
