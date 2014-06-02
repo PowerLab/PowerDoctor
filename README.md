@@ -48,5 +48,5 @@ wiki - /wiki
 
 ### Change Log ###
 
-**Version 1.0 **
+**Version 1.0**
 - Init uploding
