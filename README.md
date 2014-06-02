@@ -12,17 +12,19 @@ It offers the following information.
 - Usage Pattern: CPU, Wi-FI, Display
 - Battery Status: Voltage, Capacity Level 
 
-**Support Languages**
+### Support Languages ###
 - English
 
 ### Ongoing ###
-
 - code refactoring
 
 
 ### Developed By ###
+- [Jemin Lee (Ph.D Candidate)](http://jeminlee.blogspot.kr/)
 
-* [Jemin Lee (Ph.D Candidate)](http://jeminlee.blogspot.kr/)
+### Contacts ###
+
+- ceslab@cnu.ac.kr
 
 ### Wiki & FAQ ###
 wiki - /wiki
