@@ -18,16 +18,18 @@ It offers the following information.
 ### Ongoing ###
 - code refactoring
 
-
 ### Developed By ###
 - [Jemin Lee (Ph.D Candidate)](http://jeminlee.blogspot.kr/)
 
 ### Contacts ###
-
 - ceslab@cnu.ac.kr
 
+### Related Project ###
+- [PowerTutorTrace](https://github.com/PowerLab/PowerTutorTrace)
+- [UPG](https://github.com/PowerLab/UPG)
+
 ### Wiki & FAQ ###
-wiki - /wiki
+- wiki - /wiki
 
 ### License ###
 
