@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="processlist_color">#00000000</color>
+	<color name="processlist_text">#CCFFFFFF</color>
+	<color name="networklist_color">#00000000</color>
+	<color name="networklist_text">#CCFFFFFF</color>
+</resources>

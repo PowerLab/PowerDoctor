@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:id="@+id/miscview"
+    android:scrollbars="vertical">
+     
+	<TableLayout 
+  		android:layout_width="wrap_content"
+  		android:layout_height="wrap_content"
+  		android:stretchColumns="2" >
+
+		<TableRow android:layout_width="wrap_content"
+				  android:layout_height="wrap_content" >
+	
+			<ImageView android:id="@+id/processorImage" 
+					   android:layout_width="wrap_content" 
+				   	   android:layout_height="wrap_content"
+				   	   android:src="@drawable/cpuicon" android:padding="10dip"/>
+		
+			<TableLayout
+						android:layout_width="wrap_content"
+				  		android:layout_height="wrap_content" >
+
+				<TableRow android:layout_width="wrap_content"
+						  android:layout_height="wrap_content">
+					<TextView android:id="@+id/processorFreqText" 
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:layout_span="5" 
+					  android:text="@string/loading_text"/>
+				</TableRow>
+
+				<TableRow android:layout_width="fill_parent"
+						  android:layout_height="wrap_content"
+						  android:id="@+id/setCpu">
+					<TextView android:id="@+id/setCpuMin"
+							  android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:text="    0 "/>
+    				<ImageButton android:id="@+id/btnCpuMin"
+    							 android:layout_height="20dip"
+    							 android:layout_width="20dip"
+    							 android:src="@drawable/dshow"
+    							 android:padding="2dip" 
+    							 android:background="@drawable/empty"/>
+    				<TextView android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:text=" ~ "/>
+					<TextView android:id="@+id/setCpuMax"
+							  android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:text=" 0 "/>
+    				<ImageButton android:id="@+id/btnCpuMax"
+    							 android:layout_height="20dip"
+    							 android:layout_width="20dip"
+    							 android:src="@drawable/dshow"
+    							 android:padding="2dip" 
+    							 android:background="@drawable/empty"/>
+				</TableRow>
+				<TableRow android:layout_width="wrap_content"
+						  android:layout_height="wrap_content">
+					<TextView android:id="@+id/processorText" 
+							  android:layout_width="wrap_content" 
+							  android:layout_height="wrap_content"
+							  android:layout_span="5" />
+				</TableRow>
+				<TableRow android:layout_width="wrap_content"
+						  android:layout_height="wrap_content">
+					<TextView android:id="@+id/setCpuGov"
+							  android:layout_width="wrap_content"
+							  android:layout_height="wrap_content"
+							  android:layout_span="4" />
+					<ImageButton android:id="@+id/btnCpuGov"
+    							 android:layout_height="20dip"
+    							 android:layout_width="20dip"
+    							 android:src="@drawable/dshow"
+    							 android:padding="2dip" 
+    							 android:background="@drawable/empty"/>
+				</TableRow>
+				<TableRow android:layout_width="wrap_content"
+						  android:layout_height="wrap_content">
+					<TextView android:id="@+id/processorTempText" 
+							  android:layout_width="wrap_content" 
+							  android:layout_height="wrap_content"
+							  android:layout_span="5" />
+				</TableRow>
+			</TableLayout> 
+		</TableRow>
+		
+	
+		<TableRow android:layout_width="wrap_content"
+				  android:layout_height="wrap_content" android:padding="3dip"/>
+  		
+		<TableRow android:layout_width="wrap_content"
+				  android:layout_height="wrap_content" >
+	
+			<ImageView android:id="@+id/powerImage" 
+					   android:layout_width="wrap_content" 
+				   	   android:layout_height="wrap_content"
+				   	   android:src="@drawable/battery" android:padding="10dip"/>
+			   	   
+			<TextView android:id="@+id/powerText"
+			          android:layout_span="3"
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content" android:text="@string/loading_text"/>
+		</TableRow>
+
+		<TableRow android:layout_width="wrap_content"
+				  android:layout_height="wrap_content" android:padding="3dip"/>
+
+		<TableRow android:layout_width="wrap_content"
+				  android:layout_height="wrap_content">
+
+			<ImageView android:id="@+id/diskImage" 
+					   android:layout_width="wrap_content" 
+			   		   android:layout_height="wrap_content" 
+			   	   	   android:src="@drawable/disk" android:padding="10dip"/>
+			   	   
+			<TextView android:id="@+id/diskText"
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content" android:text="@string/loading_text"/>
+			  
+		</TableRow>
+		
+		<TableRow android:layout_width="wrap_content"
+				  android:layout_height="wrap_content" android:padding="3dip"/>
+
+		<TableRow android:layout_width="wrap_content"
+				  android:layout_height="wrap_content">
+
+			<ImageView android:id="@+id/settingImage" 
+					   android:layout_width="wrap_content" 
+			   		   android:layout_height="wrap_content" 
+			   	   	   android:src="@drawable/ic_logo" android:padding="10dip"/>
+			   	   
+			<TextView android:id="@+id/settingText"
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content" android:text="@string/loading_text"/>
+			  
+		</TableRow>
+	</TableLayout>
+</ScrollView>

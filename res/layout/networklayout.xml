@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" android:gravity="right">
+    
+        <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:stretchColumns="1">
+        
+        <TableRow>
+            <TextView android:padding="3dip" 
+            		  android:width="46sp" 
+            		  android:text="@string/protocol_text"
+            		  android:textStyle="bold" android:textColor="@color/networklist_text"/>
+            		  
+			<TextView android:layout_column="1"
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:gravity="left"
+					  android:padding="3dip" 
+					  android:text="@string/localremote_text"
+					  android:textStyle="bold" android:textColor="@color/networklist_text"/>
+
+			<TextView android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:gravity="left"
+					  android:padding="3dip" 
+					  android:width="95sp" 
+					  android:text="@string/status_text"
+					  android:textStyle="bold" android:textColor="@color/networklist_text"/>
+		
+		</TableRow>
+	</TableLayout>
+	
+    <!-- The frame layout is here since we will be showing either
+    the empty view or the list view.  -->
+    <FrameLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+        <!-- Here is the list. Since we are using a ListActivity, we
+             have to call it "@android:id/list" so ListActivity will
+             find it -->
+
+        <ListView android:id="@+id/networklist"
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:drawSelectorOnTop="false"/>
+        
+        <!-- Here is the view to show if the list is emtpy -->
+        <TextView android:id="@+id/empty"
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" android:text="@string/loading_text"/>
+            
+    </FrameLayout>
+        
+</LinearLayout>

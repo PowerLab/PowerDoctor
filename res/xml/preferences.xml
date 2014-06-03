@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<EditTextPreference android:dialogTitle="@string/updatetime_title" 
+						android:title="@string/updatetime_title" 
+						android:key="Update_Preference" 
+						android:defaultValue="2" 
+						android:summary="@string/updatetimesum_title">
+	</EditTextPreference>
+
+	<CheckBoxPreference android:defaultValue="false" 
+						android:key="OnStatusBar_Preference" 
+						android:title="@string/showiconbar_title" 
+						android:summary="@string/showiconbarsum_title">
+	</CheckBoxPreference>
+	
+	<CheckBoxPreference android:defaultValue="false" 
+						android:key="CPUUsage_Preference" 
+						android:title="@string/cpuusage_text" 
+						android:dependency="OnStatusBar_Preference" 
+						android:summary="@string/cpuusagesum_text">
+	</CheckBoxPreference>
+
+	<ListPreference android:key="StatusBarColor_Preference" 
+					android:entries="@array/statusbar_color_list" 
+					android:entryValues="@array/statusbar_color_value" 
+					android:dialogTitle="@string/iconbarcolor_title" 
+					android:dependency="CPUUsage_Preference" 
+					android:title="@string/iconbarcolor_title" 
+					android:defaultValue="0">
+	</ListPreference>
+
+	<CheckBoxPreference android:defaultValue="false" 
+						android:key="AutoStart_Preference" 
+						android:title="@string/autostart_text" 
+						android:dependency="OnStatusBar_Preference" 
+						android:summary="@string/autostartsum_text">
+	</CheckBoxPreference>
+	
+	<CheckBoxPreference android:title="@string/tempvalue_text" 
+	                    android:summary="@string/tempvaluesum_text" 
+	                    android:dependency="AutoStart_Preference" 
+	                    android:defaultValue="true" 
+	                    android:key="Temperature_Preference">
+	</CheckBoxPreference>
+	
+	<CheckBoxPreference android:key="HideAppBar_Preference" 
+						android:defaultValue="true" 
+						android:title="@string/hideappbar_text" 
+						android:summary="@string/hideappbarsum_text">
+	</CheckBoxPreference>
+
+
+	<CheckBoxPreference android:key="Rooted_Preference" 
+	                    android:defaultValue="false" 
+	                    android:summary="@string/rootedsum_text" 
+	                    android:title="@string/rooted_text" 
+	                    android:enabled="false">
+	</CheckBoxPreference>
+	
+	<PreferenceCategory android:title="@string/process_tab">
+
+		<CheckBoxPreference android:title="@string/showsystem_text" 
+							android:key="Exclude_Preference"
+							android:summary="@string/showsystemsum_text" 
+							android:defaultValue="false">
+		</CheckBoxPreference>
+	
+		<ListPreference android:entries="@array/algorithm_list" 
+						android:title="@string/algorithm_text" 
+						android:entryValues="@array/algorithm_value" 
+						android:dialogTitle="@string/algorithm_text"
+						android:key="SortAlgorithm_Preference" 
+						android:defaultValue="1">
+		</ListPreference>
+	
+	
+		<ListPreference android:entries="@array/entries_list_sort" 
+						android:title="@string/sortbytitle_text" 
+						android:entryValues="@array/entryvalues_list_sort" 
+						android:dialogTitle="@string/sortbytitle_text"
+						android:key="OrderBy_Preference" 
+						android:summary="@string/sortbytitlesum_text"
+						android:defaultValue="1">
+		</ListPreference>
+	
+		<CheckBoxPreference android:title="@string/sortway_text"
+							android:summary="@string/sortwaysum_text" 
+							android:key="SortIn_Preference" 
+							android:defaultValue="false">
+		</CheckBoxPreference>
+
+		<ListPreference android:entries="@array/behavior_list_sort" 
+						android:key="LongBehavior_Preference" 
+						android:dialogTitle="@string/longclicktitle_text" 
+						android:summary="@string/clicktitlesum_text" 
+						android:title="@string/longclicktitle_text" 
+						android:defaultValue="2" 
+						android:entryValues="@array/behaviorvalues_list_sort">
+		</ListPreference>
+
+		<ListPreference android:entries="@array/behavior_list_sort" 
+						android:key="ShortBehavior_Preference" 
+						android:dialogTitle="@string/shortclicktitle_text" 
+						android:summary="@string/clicktitlesum_text" 
+						android:title="@string/shortclicktitle_text" 
+						android:defaultValue="3" 
+						android:entryValues="@array/behaviorvalues_list_sort">
+		</ListPreference>
+
+		<CheckBoxPreference android:title="@string/slowadapter_text" 
+							android:key="SlowAdapter_Preference"
+							android:defaultValue="false">
+		</CheckBoxPreference>
+
+		<CheckBoxPreference android:key="HideMultiSelect_Preference" 
+							android:defaultValue="false" 
+							android:title="@string/hidemultiselect_text" 
+							android:summary="@string/hidemultiselectsum_text">
+		</CheckBoxPreference>
+
+		
+		
+	</PreferenceCategory>
+
+	<PreferenceCategory android:title="@string/connection_tab">
+		<CheckBoxPreference android:defaultValue="true" 
+							android:title="@string/whoisdialog_title" 
+							android:key="Whois_Preference" 
+							android:summary="@string/whoisdialogsum_title">
+		</CheckBoxPreference>
+		
+		<CheckBoxPreference android:key="IP6to4_Preference" 
+							android:defaultValue="true" 
+							android:title="@string/ip6to4_title" 
+							android:summary="@string/ip6to4sum_title">
+		</CheckBoxPreference>
+
+		<CheckBoxPreference android:defaultValue="false" 
+							android:key="RDNS_Preference" 
+							android:title="@string/rdns_title" 
+							android:summary="@string/rdnssum_title">
+		</CheckBoxPreference>
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/misc_tab">
+		<CheckBoxPreference android:key="AutoSetCPU_Preference" 
+							android:enabled="false"
+							android:defaultValue="false" 
+							android:title="@string/autosetcpu_text" >
+		</CheckBoxPreference>
+
+		<com.eolwral.osmonitor.preferences.SetCPURangePreference
+							  android:key="SetCPURange_Preference" 
+							  android:dependency="AutoSetCPU_Preference"
+							  android:title="@string/processorfreq_text" >
+		</com.eolwral.osmonitor.preferences.SetCPURangePreference>
+
+		<com.eolwral.osmonitor.preferences.SetCPUGovPreference
+							  android:key="SetCPUGov_Preference" 
+							  android:dependency="AutoSetCPU_Preference"
+							  android:title="@string/processorgov_text" >
+		</com.eolwral.osmonitor.preferences.SetCPUGovPreference>
+
+		<CheckBoxPreference android:key="BatteryJNI_Preference" 
+							android:defaultValue="false" 
+							android:title="@string/batteryjni_text" 
+							android:summary="@string/batteryjnisum_text">
+		</CheckBoxPreference>
+	</PreferenceCategory>
+	
+	<PreferenceCategory android:title="@string/debug_tab">
+		<ListPreference android:key="LogType_Preference" 
+						android:summary="@string/choicelogtypesum_text" 
+						android:title="@string/choicelogtype_text" 
+						android:dialogTitle="@string/choicelogtype_text" 
+						android:entries="@array/logtype_list_sort" 
+						android:entryValues="@array/logtype_list_sort" 
+						android:defaultValue="dmesg">
+		</ListPreference>
+
+		<PreferenceScreen android:title="@string/dmesgfilter_text">
+		
+			<CheckBoxPreference android:title="@string/filterenable_text" 
+								android:key="DMESGEnable_Preference" 
+								android:defaultValue="false">
+			</CheckBoxPreference>
+		
+			<EditTextPreference android:dialogTitle="@string/filterstr_text" 
+								android:title="@string/filterstr_text" 
+								android:key="DMESGStr_Preference" 
+								android:dependency="DMESGEnable_Preference">
+			</EditTextPreference>
+		
+			<ListPreference android:entries="@array/dmesg_level_list" 
+							android:key="DMESGLevel_Preference" 
+							android:dialogTitle="@string/filterlevel_text" 
+							android:entryValues="@array/dmesg_level_value" 
+							android:title="@string/filterlevel_text" 
+							android:dependency="DMESGEnable_Preference" 
+							android:defaultValue="8">
+			</ListPreference>
+	
+		</PreferenceScreen>
+
+		<PreferenceScreen android:title="@string/logcatfilter_text">
+			
+			<ListPreference android:key="LOGCATSource_Preference" 
+							android:dialogTitle="@string/logcatsource_text" 
+							android:title="@string/logcatsource_text" 
+							android:entries="@array/logcat_source_list" 
+							android:entryValues="@array/logcat_source_value" 
+							android:defaultValue="0">
+			</ListPreference>
+		
+			<CheckBoxPreference android:title="@string/filterenable_text" 
+								android:key="LOGCATEnable_Preference" 
+								android:defaultValue="false">
+			</CheckBoxPreference>
+
+			<ListPreference android:key="LOGCATLevel_Peference" 
+							android:dialogTitle="@string/filterlevel_text" 
+							android:title="@string/filterlevel_text" 
+							android:dependency="LOGCATEnable_Preference" 
+							android:entries="@array/logcat_level_list" 
+							android:entryValues="@array/logcat_level_value" 
+							android:defaultValue="0">
+			</ListPreference>
+		
+			<EditTextPreference android:key="LOGCATPID_Preference" 
+								android:dependency="LOGCATEnable_Preference" 
+								android:dialogTitle="@string/filterpid_text" 
+								android:title="@string/filterpid_text" 
+								android:defaultValue="0">
+			</EditTextPreference>
+		
+			<EditTextPreference android:dialogTitle="@string/filterstr_text" 
+								android:title="@string/filterstr_text" 
+								android:key="LOGCATStr_Peference" 
+								android:dependency="LOGCATEnable_Preference">
+			</EditTextPreference>
+
+		</PreferenceScreen>
+	</PreferenceCategory>
+
+
+
+</PreferenceScreen>

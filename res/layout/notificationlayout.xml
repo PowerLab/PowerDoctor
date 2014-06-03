@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="5dp"
+              >
+    <ImageView android:id="@+id/image"
+               android:layout_width="wrap_content"
+               android:layout_height="fill_parent"
+               android:layout_marginRight="5dp"
+               />
+	<LinearLayout android:orientation="vertical"
+              	  android:layout_width="fill_parent"
+              	  android:layout_height="fill_parent"
+              	  >
+    		
+		<LinearLayout android:orientation="horizontal"
+        	      	  android:layout_width="fill_parent"
+            	      android:layout_height="wrap_content" >
+    		
+    		<TextView android:id="@+id/StatusBarCPU" 
+    				  android:textColor="#000"
+    				  android:layout_height="wrap_content" 
+					  android:layout_width="0dip"
+   					  android:layout_weight="1"
+   					  android:padding="3dp"
+   					  android:textSize="15dp" />
+    		
+    		<TextView android:id="@+id/StatusBarMEM" 
+    				  android:textColor="#000"
+    				  android:layout_height="wrap_content" 
+					  android:layout_width="0dip"
+   					  android:layout_weight="1"
+   					  android:padding="3dp"
+   					  android:textSize="15dp" />
+   					  
+    	</LinearLayout>
+    	
+    	<LinearLayout android:orientation="horizontal"
+        	      	  android:layout_width="fill_parent"
+            	      android:layout_height="wrap_content" >
+    		
+    		<TextView android:id="@+id/StatusBarBAT" 
+    				  android:textColor="#000"
+    				  android:layout_height="wrap_content" 
+					  android:layout_width="0dip"
+   					  android:layout_weight="1"
+   					  android:padding="3dp"
+   					  android:textSize="15dp" />
+    		
+    		<TextView android:id="@+id/StatusBarPAD" 
+    				  android:textColor="#000"
+    				  android:layout_height="wrap_content" 
+					  android:layout_width="0dip"
+   					  android:layout_weight="1"
+   					  android:padding="3dp"
+   					  android:textSize="15dp" />
+   					  
+    	</LinearLayout>
+    	
+	</LinearLayout>
+</LinearLayout>

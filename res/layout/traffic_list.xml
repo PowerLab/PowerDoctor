@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" android:gravity="right">
+    
+    <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:stretchColumns="2">
+        
+        <TableRow>
+            <TextView android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:gravity="left"
+            		  android:padding="3dip" android:text="@string/process_text"/>
+
+            <TextView android:id="@+id/Traffic_RunProcessText"
+                      android:layout_column="2"
+					  android:gravity="left"
+            		  android:text=""
+            		  android:padding="3dip" />
+
+			<TextView android:id="@+id/Traffic_CPUUsageText" 
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:gravity="right"
+					  android:padding="3dip" android:text="@string/wifi_state_off"/>
+					  
+			<ImageView android:layout_width="wrap_content" 
+			android:id="@+id/Traffic_CPUImageView" 
+			android:layout_height="wrap_content" 
+			android:padding="3dip" 	android:src="@drawable/wifi_off"/>
+
+			<TextView android:text="" 
+					  android:id="@+id/Traffic_CPUUsage" 
+					  android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:gravity="right"
+					  android:padding="3dip" android:width="50sp"/>
+		
+		</TableRow>
+	</TableLayout>
+   <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:stretchColumns="2" 
+        android:background="@color/processlist_color">
+        
+        <TableRow>
+			<TextView android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:gravity="left"
+					  android:paddingRight="3dip" 					   
+					  android:width="60sp" 
+					  android:text="@string/pid_text"
+					  android:textColor="@color/processlist_text"
+					  android:textStyle="bold"/>
+
+			<TextView android:gravity="left"
+            		  android:layout_column="2"
+					  android:paddingLeft="3dip"
+					  android:text="@string/name_text" 
+					  android:textColor="@color/processlist_text" 
+					  android:textStyle="bold"/>
+
+			<TextView android:layout_width="wrap_content" 
+					  android:layout_height="wrap_content"
+					  android:gravity="left"
+					  android:paddingRight="3dip" 					   
+					  android:width="50sp" 
+					  android:id="@+id/Traffic_OrderType"
+					  android:textColor="@color/processlist_text"
+					  android:textStyle="bold"/>
+
+            <TextView android:padding="3dip" android:width="20dip"/>
+
+		</TableRow>
+	</TableLayout>
+    
+    <!-- The frame layout is here since we will be showing either
+    the empty view or the list view.  -->
+    <FrameLayout
+        android:layout_width="fill_parent" 
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+        <!-- Here is the list. Since we are using a ListActivity, we
+             have to call it "@android:id/list" so ListActivity will
+             find it
+-->
+        <ListView android:id="@android:id/list"
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent"
+            android:smoothScrollbar="true"
+            android:scrollingCache="true"
+            android:drawSelectorOnTop="false"/>
+        
+        <!-- Here is the view to show if the list is emtpy -->
+        <TextView android:id="@+id/Traffic_empty"
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" android:text="@string/loading_text"/>
+            
+    </FrameLayout>
+
+    <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:stretchColumns="5">
+        
+        <TableRow>
+            <TextView android:padding="3dip" android:text="@string/totaltraffic_3g_rx"/>
+
+            <TextView android:id="@+id/Traffic_MemTotalText"
+            		  android:text="0KB"
+            		  android:padding="3dip" />
+
+            <TextView android:padding="3dip" android:text="@string/totaltraffic_3g_tx"/>
+
+            <TextView android:id="@+id/Traffic_MemFreeText"
+            		  android:text="0KB"
+            		  android:padding="3dip" />
+
+            <TextView android:layout_column="5"
+            		  android:text=""
+            		  android:padding="3dip" />
+        </TableRow>
+                <TableRow>
+            <TextView android:padding="3dip" android:text="@string/totaltraffic_wifi_rx"/>
+
+            <TextView android:id="@+id/Traffic_MemTotalText2"
+            		  android:text="0K"
+            		  android:padding="3dip" />
+
+            <TextView android:padding="3dip" android:text="@string/totaltraffic_wifi_tx"/>
+
+            <TextView android:id="@+id/Traffic_MemFreeText2"
+            		  android:text="0K"
+            		  android:padding="3dip" />
+
+            <TextView android:layout_column="5"
+            		  android:text=""
+            		  android:padding="3dip" />
+        </TableRow>
+ 
+	</TableLayout>
+	
+    <TableLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:id="@+id/Traffic_MultiSelectView" >
+        
+        <TableRow>
+     		<CheckBox android:enabled="true"
+     		        android:id="@+id/Traffic_Freeze"
+     		        android:text="@string/freeze_text"/>
+        </TableRow>
+ 
+	</TableLayout>
+
+</LinearLayout>

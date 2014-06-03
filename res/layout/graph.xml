@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+		
+		<com.sunb.lib.SunGraph.GraphView
+			android:id="@+id/lcd_graph"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"/>
+		<com.sunb.lib.SunGraph.GraphView
+			android:id="@+id/cpu_graph"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"/>
+		<com.sunb.lib.SunGraph.GraphView
+			android:id="@+id/cellular_graph"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"/>
+		<com.sunb.lib.SunGraph.GraphView
+			android:id="@+id/wifi_graph"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"/>
+		<com.sunb.lib.SunGraph.GraphView
+			android:id="@+id/gps_graph"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"/>
+		<com.sunb.lib.SunGraph.GraphView
+			android:id="@+id/audio_graph"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"/>
+</LinearLayout>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.eolwral.osmonitor"
+      android:installLocation="auto" android:versionName="1.1.8" android:versionCode="19">
+    <uses-sdk android:minSdkVersion="3" android:targetSdkVersion="8"/>
+    <application android:label="@string/app_name" android:icon="@drawable/monitor">
+    	<activity android:name=".OSMonitor"
+                  android:label="@string/app_name" android:configChanges="keyboardHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        //본인이 추가한 Activity 들이다
+        <activity android:name=".GraphTutorial_cutom" android:label="GraphTutorial_cutom"></activity>
+        <activity android:name="com.eslab.osmonitor.providerDB.SaveInformationActivity" 
+        		  android:label="com.eslab.osmonitor.providerDB.SaveInformationActivity"></activity>
+        
+        //부팅을 했을땔ㄹ 알려주기 위한 리시버이다. 
+        <receiver android:enabled="true" android:name=".BootUpReceiver"
+				  android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+		</receiver>
+		
+		//AppWidget 부분이다. 
+		<receiver android:name=".BatteryWidget" android:label="Power Doctor DEMO">
+		<intent-filter>
+			<action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+		</intent-filter>
+		<meta-data android:name="android.appwidget.provider"
+			android:resource="@xml/battery_widget_info"/>
+		</receiver>
+		
+		//서비스를 등록해 준다. 
+		<service android:name="OSMonitorService">
+            <intent-filter>
+                <action android:name="com.eolwral.osmonitor.OSMonitorService" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <activity android:configChanges="keyboardHidden" android:name=".processes.ProcessList" />
+        <activity android:configChanges="keyboardHidden" android:name=".interfaces.InterfaceList" />
+        <activity android:configChanges="keyboardHidden" android:name=".networks.NetworkList" />
+        <activity android:configChanges="keyboardHidden" android:name=".messages.DebugBox" />
+        <activity android:configChanges="keyboardHidden" android:name=".misc.MiscBox" />
+  		<activity android:configChanges="keyboardHidden" android:name="com.eslab.osmonitor.traffic.ApplicationTrafficList" />
+    
+		<activity android:name=".preferences.Preferences"></activity>
+		<uses-library android:name="com.google.android.maps"/>
+	</application>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+	<uses-permission android:name="android.permission.READ_LOGS" />
+
+    <supports-screens android:smallScreens="true" 
+                      android:normalScreens="true" 
+                      android:largeScreens="true" 
+                      android:anyDensity="true" 
+                      android:resizeable="true"/>
+	<uses-permission android:name="android.permission.INTERNET" />
+  	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+  	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+ 	
+ 	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" /> //Wake Lock에 대한 권한이다.
+</manifest>

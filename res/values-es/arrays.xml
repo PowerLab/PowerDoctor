@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="entries_list_sort">
+        <item>PID</item>
+        <item>Carga</item>
+        <item>Memoria</item>
+        <item>Hilos</item>
+        <item>Nombre</item>
+    </string-array>
+
+	<string-array name="entryvalues_list_sort">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+	</string-array>
+
+    <string-array name="behavior_list_sort">
+        <item>Mostrar detalles</item>
+        <item>Menu de acción</item>
+        <item>Derecha detalles/Izquierda acción</item>
+    </string-array>
+
+	<string-array name="behaviorvalues_list_sort">
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+	</string-array>
+	
+	
+	<string-array name="logtype_list_sort">
+        <item>dmesg</item>
+        <item>Logcat</item>
+    </string-array>
+
+	<string-array name="dmesg_level_list">
+		<item>Ninguno</item>
+		<item>Emergencia</item>
+		<item>Advertencia</item>
+		<item>Critico</item>
+		<item>Error</item>
+		<item>Advertencia</item>
+		<item>Notificacion</item>
+		<item>Informacion</item>
+		<item>Debug</item>
+    </string-array>
+    
+    <string-array name="dmesg_level_value">
+		<item>8</item>
+		<item>0</item>
+		<item>1</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+    </string-array>
+
+	<string-array name="logcat_level_list">
+		<item>Ninguno</item>
+		<item>Verbose</item>
+		<item>Debug</item>
+		<item>Informacion</item>
+		<item>Advertencia</item>
+		<item>Error</item>
+		<item>Fatal</item>
+    </string-array>
+    
+    <string-array name="logcat_level_value">
+		<item>0</item>
+		<item>2</item>
+		<item>3</item>
+		<item>4</item>
+		<item>5</item>
+		<item>6</item>
+		<item>7</item>
+    </string-array>
+
+	<string-array name="logcat_source_list">
+		<item>Principal</item>
+		<item>Radio</item>
+<!-- 		<item>Eventos</item> -->
+    </string-array>
+    
+    <string-array name="logcat_source_value">
+		<item>0</item>
+		<item>1</item>
+<!-- 		<item>2</item>  -->
+    </string-array>
+
+
+    <string-array name="statusbar_color_list">
+        <item>Verde</item>
+        <item>Azul</item>
+    </string-array>
+
+    <string-array name="statusbar_color_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array> 
+    
+    <string-array name="algorithm_list">
+        <item>Ordenamiento de burbuja</item>
+        <item>Ordenamiento rápido</item>
+    </string-array>
+
+    <string-array name="algorithm_value">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+    
+</resources>
