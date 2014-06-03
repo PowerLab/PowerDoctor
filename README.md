@@ -3,9 +3,7 @@ PowerDoctor
 
 it is power model generation tool. it allows developer to make power model from real user's usage patterns. we also provide another tool called usage pattern generator to easily collect usage patterns. we believe that these tools help app developer to generate new power model.
 
-This tool developed based on OSMonitor version 2.0.
-
-[OSMonitor](https://github.com/eolwral/OSMonitor)
+This tool has developed based on [OSMonitor](https://github.com/eolwral/OSMonitor) version 2.0.
 
 It offers the following information.
 
