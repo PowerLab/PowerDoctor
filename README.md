@@ -15,9 +15,9 @@ It offers the following information.
 
 ### Ongoing ###
 - code refactoring
-- 
+
 ## Related Paper ##
--- [Automated Power Model Generation Method for Smartphones](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6851993&sortType%3Dasc_p_Sequence%26filter%3DAND%28p_IS_Number%3A6851985%29)
+- [Automated Power Model Generation Method for Smartphones](http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6851993&sortType%3Dasc_p_Sequence%26filter%3DAND%28p_IS_Number%3A6851985%29)
 
 ### Developed By ###
 - [Jemin Lee (Ph.D Candidate)](http://jeminlee.blogspot.kr/)
